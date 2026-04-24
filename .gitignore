@@ -37,3 +37,6 @@ coverage/
 # Misc
 .cache/
 *.local
+
+# Local agent skills (not part of the app)
+client/.agents/
