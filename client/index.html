@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Parse parent-child edges, detect trees and cycles, and explore hierarchies from the BFHL challenge API."
+    />
+    <meta property="og:title" content="BFHL — Hierarchy visualizer" />
+    <meta
+      property="og:description"
+      content="Visualize directed graphs as trees, spot cycles, and inspect invalid or duplicate edges."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>BFHL — Hierarchy visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Outfit", "system-ui", "sans-serif"],
+              mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+            },
+            colors: {
+              ink: "#121816",
+              mist: "#5a6461",
+              canvas: "#f3f2ef",
+              surface: "#fcfbfa",
+              line: "#e2e0db",
+              accent: {
+                DEFAULT: "#3a5c56",
+                hover: "#2f4a45",
+                soft: "#e4ebe9",
+              },
+            },
+            boxShadow: {
+              lift: "0 1px 2px rgba(18, 24, 22, 0.04), 0 8px 24px -6px rgba(18, 24, 22, 0.12)",
+            },
+            maxWidth: {
+              content: "68ch",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-canvas text-ink antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
